@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/adapter.css">
+    <style>
+        .header{
+            width: 100%;
+            height: 2.666667rem;
+            background: url(./img/头.png) no-repeat;
+            background-size: 100%;
+        }
+        .container{
+            width: 92%;
+            padding-left: 6%;
+        }
+
+        .nav{
+            padding-left: .4rem;
+            padding-right: .4rem;
+            color: #d55249;
+        }
+
+        .nav p{
+            font-size: 2.666667rem;
+            margin-top: 2.8rem;
+            margin-bottom: 2.666667rem;
+        }
+
+        .footer{
+            width: 100%;
+            height: 3.333333rem;
+            background-color: #d55249;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item{
+            width: 1.866667rem;
+            height: 1.866667rem;
+        }
+        .item img{
+            width: 100%;
+            height: 100%;
+        }
+        .box1 img{
+            width: 2.666667rem /* 40/15 */;
+            height: 2.666667rem/* 20/15 */;
+            margin-right: .666667rem /* 10/15 */;
+            float: left;
+        }
+        .box1{
+            line-height: 2.666667rem;
+            color: #d55249;
+
+        }
+        .info ul li a{
+            color: #d55249;
+        }.info ul li{
+            clear: both;
+        }
+        .info ul li .span{
+            width: 2rem /* 30/15 */ /* 10/15 */;
+            height: 3.333333rem /* 50/15 */;
+            float: left;
+            line-height: 3.333333;
+            text-align: center;
+            font-size: 2rem /* 30/15 */;
+        }
+        .info ul li a .span2{
+            width: 3.333333rem /* 50/15 */ /* 10/15 */;
+            height: 3.3333333rem/* 40/15 */;
+            margin-top: 2rem /* 30/15 */;
+            float: left;
+            text-align: center;
+        }
+        .container{
+            margin-bottom: 13.333333rem /* 200/15 */;
+        }
+        .info{
+            width: 100%;
+            height: 2rem;
+            position: relative;
+        }
+
+        .search{
+            width: 20rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .search input{
+            width: 100%;
+            height: 1.6rem;
+            border-radius: 15px;
+            margin-top: .2rem;
+            line-height: 1.6rem;
+            padding-left: 3rem;
+            color: #b7b7b7;
+            box-shadow: .133333rem .133333rem .333333rem #f9f9f9;
+        }
+        .search img{
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: .2rem;
+            right: .666667rem;
+        }
+        .info  .img{
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            top: .1rem;
+            right: .666667rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+    </div>
+    <div class="info">
+        <div class="search">
+            <input type="text" value="请输入需要查找的内容">
+            <img src="./img/放大镜.png" alt="">
+        </div>
+        <div class="img">
+            <a href="./修改个人资料.html"><img src="./img/人.png" alt=""></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <p>音乐</p>
+            <div class="box1">
+                <a href="./音乐.html"><img src="./img/播放@2x.png" alt="">全部播放</a>
+                
+            </div>      
+            <div class="info">
+                <ul> 
+                    <li><a href="#">
+                    <div class="span">1</div>
+                    <div class="span2">
+                        <span>你好</span>
+                        <br>
+                        <span>3:20</span>
+                    </div>
+                    </a></li>
+                                        <li><a href="#">
+                    <div class="span">2</div>
+                    <div class="span2">
+                        <span>够钟</span>
+                        <br>
+                        <span>2:20</span>
+                    </div>
+                    </a></li>
+                                        <li><a href="#">
+                    <div class="span">3</div>
+                    <div class="span2">
+                        <span>洋葱</span>
+                        <br>
+                        <span>2:30</span>
+                    </div>
+                    </a></li>
+                                        <li><a href="#">
+                    <div class="span">4</div>
+                    <div class="span2">
+                        <span>知足</span>
+                        <br>
+                        <span>2:10</span>
+                    </div>
+                    </a></li>
+                                        <li><a href="#">
+                    <div class="span">5</div>
+                    <div class="span2">
+                        <span>疼爱</span>
+                        <br>
+                        <span>2:25</span>
+                    </div>
+                    </a></li>
+                    <li><a href="#">
+                    <div class="span">6</div>
+                    <div class="span2">
+                        <span>感应</span>
+                        <br>
+                        <span>3:30</span>
+                    </div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="item">
+            <a href="./音乐.html">
+                <img src="./img/音乐4.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./视频页.html">
+                <img src="./img/电视@2x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./首页.html">
+                <img src="./img/logo@2x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./下载.html">
+                <img src="./img/下载 2x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./修改个人资料.html">
+                <img src="./img/个人 1x.png" alt="">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
