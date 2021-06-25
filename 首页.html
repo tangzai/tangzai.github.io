@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/adapter.css">
+    <style>
+        .container{
+            width: 92%;
+            padding-left: 6%;
+        }
+
+        img{
+            width: 100%;
+        }
+        .banner{
+            width: 21.5rem;
+            height: 10.133333rem;
+            margin-top: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner_inner{
+            width: 150.5rem;
+            transform: translate(-21.5rem);
+        }
+        .banner_inner > .item-img{
+            float: left;
+            width: 21.5rem;
+        }
+        /* 小圆点 */
+        .indicators{
+            list-style: none;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+        }
+        .indicators li{
+            float: left;
+            margin-right: 5px;
+        }
+        .indicators li a{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid red;
+            border-radius: 50%;
+        }
+        .indicators li.active a{
+            background-color: red;
+        }
+
+        .header{
+            width: 100%;
+            height: 2.666667rem;
+            background: url(./img/头.png) no-repeat;
+            background-size: 100%;
+        }
+        .header-2{
+            width: 100%;
+            height: 2.4rem;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: .933333rem;
+        }
+        .header-2 span{
+            margin-left: .666667rem;
+            float: left;
+            line-height: 2.4rem;
+        }
+        .footer{
+            width: 100%;
+            height: 3.333333rem;
+            background-color: #d55249;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item{
+            width: 1.866667rem;
+            height: 1.866667rem;
+        }
+        .item img{
+            width: 100%;
+            height: 100%;
+        }
+        .nav{
+            padding-left: .4rem;
+            padding-right: .4rem;
+        }
+        .info{
+            width: 100%;
+            height: 2rem;
+            position: relative;
+        }
+
+        .search{
+            width: 20rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .search input{
+            width: 100%;
+            height: 1.6rem;
+            border-radius: 15px;
+            margin-top: .2rem;
+            line-height: 1.6rem;
+            padding-left: 2rem;
+            color: #b7b7b7;
+            box-shadow: .133333rem .133333rem .333333rem #f9f9f9;
+        }
+        .search img{
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: .2rem;
+            right: .666667rem;
+        }
+        .info  .img{
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            top: .1rem;
+            right: .666667rem;
+        }
+        .header-2{
+            width: 100%;
+            height: 2.4rem;
+            font-size: 1rem;
+            margin-bottom: .933333rem;
+        }
+        .header-2 p{
+            float: left;
+            line-height: 2.4rem;
+        }
+        .header-2 span{
+            margin-left: .666667rem;
+            float: right;
+            line-height: 2.4rem;
+        }
+
+       .a{
+           width: 5.333333rem;
+           height: 4.666667rem;
+           text-align: center;
+       }
+       .a a img{
+           width: 5.333333rem;
+           height: 5.333333rem;
+       }
+       .box{
+           width: 100%;
+           height: 9.666667rem;
+           display: flex;
+           justify-content: space-between;
+       }
+       .box-s{
+           width: 6.4rem;
+           height: 9.666667rem;
+       }
+       .box-s div img{
+            width: 100%;
+            height: 100%;
+            border-radius: 1.333333rem;
+       }
+       .box-s div{
+        width: 6rem;
+        height: 6rem;
+       }
+       .box-s e{
+        color: #cdcdcd;
+       }
+       .box2{
+           width: 100%;
+           height: 4.333333rem;
+           display: flex;
+           justify-content: space-between;
+       }
+       .box2 .t{
+           width: 4rem;
+           height: 4rem;
+       }
+       .box2 .tt{
+           width: 4rem;
+           height: 4rem;
+
+       }
+
+       .kong{
+           width: 100%;
+           height: 4.666667rem;
+       }
+       .nav-2{
+            width: 21.5rem;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+       }
+       .nav_img > img{
+           width: 2.666667rem /* 40/15 */ /* 80/15 */;
+           height: 2.666667rem /* 40/15 */ /* 80/15 */;
+       }
+       .nav_img{
+           width: 3.333333rem /* 50/15 */;
+           text-align: center;
+       }
+       hr{
+           margin-top: 1.333333rem /* 20/15 */;
+           margin-bottom: 1.333333rem /* 20/15 */;
+       }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="nav">
+            <div class="info">
+                <div class="search">
+                    <input type="text" value="请输入需要查找的内容">
+                    <img src="./img/放大镜.png" alt="">
+                </div>
+                <div class="img">
+                    <a href="./修改个人资料.html"><img src="./img/人.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner_inner">
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+                <div class="item-img">
+                    <a href="#"><img src="./img/banner.png" alt=""></a>
+                </div>
+            </div>
+            <!-- 3.小圆点标志 -->
+            <ol class="indicators">
+                <li class="active"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ol>
+            
+        </div>
+        <div class="nav-2">
+            <div class="nav_img">
+                <a href="./短信.html"><img src="./img/短信@2x.png" alt=""></a>
+                <span>短信</span>
+            </div>
+            <div class="nav_img">
+                <a href="./备忘录.html"><img src="./img/备忘录@2x.png" alt=""></a>
+                <span>备忘录</span>
+            </div>
+            <div class="nav_img">
+                <a href="./标签.html"><img src="./img/标签@2x.png" alt=""></a>
+                <span>标签</span>
+            </div>
+            <div class="nav_img">
+                <a href="./通信录.html"><img src="./img/电话@2x.png" alt=""></a>
+                <span>电话</span>
+            </div>
+            <div class="nav_img">
+                <a href="./视频页.html"><img src="./img/icon_video@2x.png" alt=""></a>
+                <span>视频</span>
+            </div>
+        </div>
+        <hr>
+        <div class="nav">
+            <div class="header-2">
+                <p>猜你喜欢</p>
+                <span>></span>
+            </div>
+
+            <div class="box">
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层11@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层12@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层10@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层11@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层12@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层10@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层11@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层12@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层10@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层11@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层12@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+                <div class="box-s">
+                    <div>
+                        <img src="./img/图层10@2x.png" alt="">
+                    </div>
+                    <span>YOUDESER</span>
+                    <e>youd</e>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="nav">
+            <div class="header-2">
+                <p>歌手信息-推荐</p>
+                <span>></span>
+            </div>
+            <div class="box2">
+                <div class="t">
+                    <img src="./img/图层13@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层14@2x.png" alt="">
+                </div>
+                 <div class="t">
+                    <img src="./img/图层15@2x.png" alt="">
+                </div>
+                <div class="tt">
+                    <img src="./img/图层166@2x.png" alt="">
+                </div>
+            </div>
+            <div class="box2">
+                <div class="t">
+                    <img src="./img/图层13@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层14@2x.png" alt="">
+                </div>
+                 <div class="t">
+                    <img src="./img/图层15@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层166@2x.png" alt="">
+                </div>
+            </div>
+            <div class="box2">
+                <div class="t">
+                    <img src="./img/图层13@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层14@2x.png" alt="">
+                </div>
+                 <div class="t">
+                    <img src="./img/图层15@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层166@2x.png" alt="">
+                </div>
+            </div>
+            <div class="box2">
+                <div class="t">
+                    <img src="./img/图层13@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层14@2x.png" alt="">
+                </div>
+                 <div class="t">
+                    <img src="./img/图层15@2x.png" alt="">
+                </div>
+                <div class="t">
+                    <img src="./img/图层166@2x.png" alt="">
+                </div>
+            </div>
+        </div>
+        <a href=./PC/index.html>前往桌面端</a>
+        <div class="kong"></div>
+    </div>
+    <div class="footer">
+        <div class="item">
+            <a href="./音乐.html">
+                <img src="./img/音乐 1x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./视频页.html">
+                <img src="./img/电视@2x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./首页.html">
+                <img src="./img/logo4.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./下载.html">
+                <img src="./img/下载 2x.png" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a href="./修改个人资料.html">
+                <img src="./img/个人 1x.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script src="./JS/bannerloop.js"></script>
+</body>
+</html>
