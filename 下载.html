@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/adapter.css">
+    <style>
+        .header{
+            width: 100%;
+            height: 2.666667rem;
+            background: url(./img/头.png) no-repeat;
+            background-size: 100%;
+        }
+        .container{
+            width: 92%;
+            padding-left: 6%;
+        }
+
+        .nav{
+            padding-left: .4rem;
+            padding-right: .4rem;
+            color: #d55249;
+        }
+
+        .nav p{
+            font-size: 2.466667rem /* 58/15 */;
+            margin-top: 2.8rem;
+            margin-bottom: 2.666667rem;
+
+        }
+        .nav span{
+            font-size: 1.533333rem /* 38/15 */;
+  
+        }
+        .footer{
+            width: 100%;
+            height: 3.333333rem;
+            background-color: #d55249;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item{
+            width: 1.866667rem;
+            height: 1.866667rem;
+        }
+        .item img{
+            width: 100%;
+            height: 100%;
+        }
+        .box .img{
+            width: 3.333333rem /* 50/15 */ /* 100/15 */ /* 50/15 */;
+            height: 6.666667rem /* 100/15 */ /* 200/15 */ /* 100/15 */;
+            float: left;
+        }
+        .box .info{
+            width: 80%;
+            float: left;
+            color: #d55249; 
+            padding-left: .666667rem /* 10/15 */;
+        }
+        .box .info p{
+            font-size: 1.6rem /* 24/15 */;
+        }
+        .info hr{
+            margin-top: 2rem /* 30/15 */;
+            height: .2rem /* 3/15 */;
+            background-color: red;
+            background: linear-gradient(to right, red,#5DDDD3,rgba(255,255,255,0));
+        }
+        .info{
+            width: 100%;
+            height: 2rem;
+            position: relative;
+        }
+
+        .search{
+            width: 20rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .search input{
+            width: 100%;
+            height: 1.6rem;
+            border-radius: 15px;
+            margin-top: .2rem;
+            line-height: 1.6rem;
+            padding-left: 2rem;
+            color: #b7b7b7;
+            box-shadow: .133333rem .133333rem .333333rem #f9f9f9;
+        }
+        .search img{
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: .2rem;
+            right: .666667rem;
+        }
+        .info  .img{
+            width: 2.4rem;
+            height: 2.4rem;
+            position: absolute;
+            top: .1rem;
+            right: .666667rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+       
+    </div>
+    <div class="info">
+        <div class="search">
+            <input type="text" value="请输入需要查找的内容">
+            <img src="./img/放大镜.png" alt="">
+        </div>
+        <div class="img">
+            <a href="./修改个人资料.html"><img src="./img/人.png" alt=""></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <p>下载</p>
+            <span>视频</span>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="./余下移动端image/美眉@2x.png" alt="">
+            </div>
+            <div class="info">
+                <p>mother</p>
+                <span>4.56G</span>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+            <div class="item">
+                <a href="./音乐.html">
+                    <img src="./img/音乐 1x.png" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="./视频页.html">
+                    <img src="./img/电视@2x.png" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="./首页.html">
+                    <img src="./img/logo@2x.png" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="./下载.html">
+                    <img src="./img/下载@2x.png" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="./修改个人资料.html">
+                    <img src="./img/个人 1x.png" alt="">
+                </a>
+            </div>
+        </div>
+</body>
+</html>
