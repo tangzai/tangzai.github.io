@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img{
+    border: 0;
+    vertical-align: none;
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6,em{
+    font-weight: normal;
+}
+input{
+    border: 0 none;
+    outline: 0 none;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+    content: '';
+    display: table;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
